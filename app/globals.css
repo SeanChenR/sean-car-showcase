@@ -205,6 +205,12 @@
 .footer__copyrights-link {
   @apply flex-1 flex sm:justify-end justify-center max-sm:mt-4 max-sm:gap-30 gap-10;
 }
+/* Custom dotted pattern for footer */
+.footer-dotted-pattern {
+  background-image: radial-gradient(circle, rgba(43, 89, 255, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
 /* END: Footer styles */
 
 /* START: searchbar styles */

@@ -33,16 +33,12 @@ const Footer = () => {
       <div className='absolute inset-0 opacity-100'>
         <div className='absolute top-10 left-10 text-6xl text-primary-blue/20 transform rotate-12'>🚗</div>
         <div className='absolute top-20 right-20 text-4xl text-secondary-orange/20 transform -rotate-12'>🏎️</div>
-        <div className='absolute bottom-32 left-1/3 text-5xl text-primary-blue/15 transform rotate-45'>🚙</div>
+        <div className='absolute bottom-42 left-4/11 text-5xl text-primary-blue/15 transform rotate-45'>🚙</div>
         <div className='absolute bottom-1/3 right-1/4 text-3xl text-grey/30 transform -rotate-45'>🚕</div>
       </div>
       
       {/* Dotted pattern overlay */}
-      <div className='absolute inset-0' style={{
-        backgroundImage: 'radial-gradient(circle, rgba(43, 89, 255, 0.1) 1px, transparent 1px)',
-        backgroundSize: '30px 30px',
-        backgroundPosition: '0 0, 15px 15px'
-      }}></div>
+      <div className='absolute inset-0 footer-dotted-pattern'></div>
       
       <div className='relative z-10 flex flex-col text-black-100 mt-5 border-t border-primary-blue/20'>
         <div className='flex max-md:flex-col max-md:items-center justify-center gap-8 sm:px-16 px-6 py-12'>
