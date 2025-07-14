@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import CustomButton from "./CustomButton"
+import "../app/globals.css"
 
 const Hero = () => {
 
@@ -24,7 +25,7 @@ const Hero = () => {
         </p>
         <CustomButton
           title="Explore Cars"
-          containerStyles="mt-10 bg-primary-blue text-white rounded-full"
+          containerStyles="bg-primary-blue text-white rounded-full mt-10"
           handleClick={handleScroll}
         />
       </div>
