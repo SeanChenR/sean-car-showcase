@@ -4,18 +4,6 @@ import Link from 'next/link'
 import { footerLinks } from '@/constants'
 
 const Footer = () => {
-  const getSectionEmoji = (title: string) => {
-    switch (title) {
-      case 'About':
-        return '🚗'
-      case 'Company':
-        return '🏢'
-      case 'Socials':
-        return '🌐'
-      default:
-        return '📍'
-    }
-  }
 
   return (
     <footer className='relative overflow-hidden'>
@@ -46,7 +34,7 @@ const Footer = () => {
             {footerLinks.map((link) => (
               <div key={link.title} className='flex flex-col gap-4 max-md:text-center md:flex-1 group'>
                 <h3 className='font-bold text-xl flex items-center justify-center md:justify-start gap-2 text-black-100 group-hover:text-primary-blue transition-colors duration-300'>
-                  <span className='text-2xl drop-shadow-sm'>{getSectionEmoji(link.title)}</span>
+                  <span className='text-2xl drop-shadow-sm'>{link.emoji}</span>
                   {link.title}
                 </h3>
                 <ul className='flex flex-col gap-3'>

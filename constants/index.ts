@@ -75,6 +75,7 @@ export const fuels = [
 export const footerLinks = [
   {
     title: "About",
+    emoji: "🚗",
     links: [
       { title: "Works", url: "/" },
       { title: "Featured", url: "/" },
@@ -84,6 +85,7 @@ export const footerLinks = [
   },
   {
     title: "Company",
+    emoji: "🏢",
     links: [
       { title: "Blog", url: "/" },
       { title: "Events", url: "/" },
@@ -93,6 +95,7 @@ export const footerLinks = [
   },
   {
     title: "Socials",
+    emoji: "🌐",
     links: [
       { title: "X", url: "/" },
       { title: "Line", url: "/" },

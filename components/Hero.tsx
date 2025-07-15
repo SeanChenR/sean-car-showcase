@@ -2,7 +2,6 @@
 
 import Image from "next/image"
 import CustomButton from "./CustomButton"
-import "../app/globals.css"
 
 const Hero = () => {
 
