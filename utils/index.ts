@@ -38,6 +38,11 @@ function parseVehicleXml(xmlText: string) {
   };
 }
 
+interface VehicleOption {
+  text: string
+  value: string
+}
+
 export async function fetchCars(make = 'Toyota', model = 'Corolla', year = '2020') {
   try {
     // Get vehicle options for the specified make, model, and year
@@ -53,7 +58,7 @@ export async function fetchCars(make = 'Toyota', model = 'Corolla', year = '2020
 
     // Fetch detailed data for each vehicle option
     const vehicles = await Promise.all(
-      optionsData.menuItem.map(async (option: any) => {
+      optionsData.menuItem.map(async (option: VehicleOption) => {
         const vehicleResponse = await fetch(`https://www.fueleconomy.gov/ws/rest/vehicle/${option.value}`)
         const vehicleXml = await vehicleResponse.text()
         const vehicleData = parseVehicleXml(vehicleXml)
