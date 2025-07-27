@@ -36,7 +36,7 @@ const CarCard = ({ car }: CarCardProps) => {
       </p>
 
       <div className="relative w-full h-40 my-3 object-contain">
-        <Image src="/hero.png" alt="car model" fill priority className="object-contain" />
+        <Image src="/hero.png" alt={`${make} ${model}`} fill priority className="object-contain" />
       </div>
 
       <div className="relative flex w-full mt-2">
@@ -44,17 +44,17 @@ const CarCard = ({ car }: CarCardProps) => {
           <div className="flex flex-col justify-center items-center gap-2">
             <Image src="/steering-wheel.svg" width={20} height={20} alt="steering wheel" />
             <p className="text-[14px] leading-[17px]">
-              {transmission.toLowerCase().includes('automatic') || transmission.toLowerCase().includes('av') ? "Automatic" : "Manual"}
+              {transmission.toLowerCase().startsWith('a') ? "Automatic" : "Manual"}
             </p>
           </div>
           <div className="car-card__icon">
-            <Image src="/tire.svg" width={20} height={20} alt="tire" />
+            <Image src="/tire.svg" width={20} height={20} alt="drive type" />
             <p className="car-card__icon-text">
               {drive.replace(/-/g, ' ').split(' ').map(word => word.charAt(0)).join('').toUpperCase()}
             </p>
           </div>
           <div className="car-card__icon">
-            <Image src="/gas.svg" width={20} height={20} alt="gas" />
+            <Image src="/gas.svg" width={20} height={20} alt="fuel efficiency" />
             <p className="car-card__icon-text">{city_mpg} MPG</p>
           </div>
         </div>

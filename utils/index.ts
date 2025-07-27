@@ -83,17 +83,18 @@ export async function fetchCars(make = 'Toyota', model = 'Corolla', year = '2020
   }
 }
 
-export const calculateCarRent = (city_mpg: number, year: number) => {
-  const basePricePerDay = 50; // Base rental price per day in dollars
-  const mileageFactor = 0.1; // Additional rate per mile driven
-  const ageFactor = 0.05; // Additional rate per year of vehicle age
+// Car rental calculation constants
+const BASE_PRICE_PER_DAY = 50; // Base rental price per day in dollars
+const MILEAGE_FACTOR = 0.1; // Additional rate per mile driven
+const AGE_FACTOR = 0.05; // Additional rate per year of vehicle age
 
+export const calculateCarRent = (city_mpg: number, year: number) => {
   // Calculate additional rate based on mileage and age
-  const mileageRate = city_mpg * mileageFactor;
-  const ageRate = (new Date().getFullYear() - year) * ageFactor;
+  const mileageRate = city_mpg * MILEAGE_FACTOR;
+  const ageRate = (new Date().getFullYear() - year) * AGE_FACTOR;
 
   // Calculate total rental rate per day
-  const rentalRatePerDay = basePricePerDay + mileageRate + ageRate;
+  const rentalRatePerDay = BASE_PRICE_PER_DAY + mileageRate + ageRate;
 
   return rentalRatePerDay.toFixed(0);
 };
