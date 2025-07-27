@@ -48,13 +48,13 @@ const CarCard = ({ car }: CarCardProps) => {
             </p>
           </div>
           <div className="car-card__icon">
-            <Image src="/tire.svg" width={20} height={20} alt="seat" />
+            <Image src="/tire.svg" width={20} height={20} alt="tire" />
             <p className="car-card__icon-text">
               {drive.replace(/-/g, ' ').split(' ').map(word => word.charAt(0)).join('').toUpperCase()}
             </p>
           </div>
           <div className="car-card__icon">
-            <Image src="/gas.svg" width={20} height={20} alt="seat" />
+            <Image src="/gas.svg" width={20} height={20} alt="gas" />
             <p className="car-card__icon-text">{city_mpg} MPG</p>
           </div>
         </div>
